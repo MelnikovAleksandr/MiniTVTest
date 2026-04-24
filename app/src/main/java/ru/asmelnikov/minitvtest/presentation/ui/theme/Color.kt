@@ -1,4 +1,4 @@
-package ru.asmelnikov.minitvtest.ui.theme
+package ru.asmelnikov.minitvtest.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
