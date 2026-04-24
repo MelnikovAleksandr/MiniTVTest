@@ -1,4 +1,4 @@
-package ru.asmelnikov.minitvtest.domain
+package ru.asmelnikov.minitvtest.domain.model
 
 sealed class Resource<T>(
     val data: T? = null,
