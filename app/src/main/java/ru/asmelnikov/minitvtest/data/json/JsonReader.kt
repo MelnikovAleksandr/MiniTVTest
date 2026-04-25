@@ -27,7 +27,7 @@ interface JsonReader {
                 val listType = object : TypeToken<List<VideoItemDTO>>() {}.type
                 val result: List<VideoItemDTO> = Gson().fromJson(jsonString, listType)
                 Resource.Success(result)
-            } catch (e: IOException) {
+            } catch (e: Exception) {
                 Resource.Error(errors = ErrorsTypes.ParseError(message = e.message))
             }
         }
