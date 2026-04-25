@@ -1,5 +1,6 @@
 package ru.asmelnikov.minitvtest.data.repository
 
+import android.util.Log
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import ru.asmelnikov.minitvtest.data.json.JsonReader
@@ -18,6 +19,10 @@ class VideoRepositoryImpl(
     private val jsonReader: JsonReader
 ) : VideoRepository {
 
+    private companion object {
+        private const val TAG = "VideoRepository"
+    }
+
     override fun getMediaList(): Resource<List<VideoItem>> {
         return when (val result = jsonReader.readMediaList()) {
             is Resource.Success -> {
@@ -34,6 +39,7 @@ class VideoRepositoryImpl(
     override suspend fun insertReport(report: VideoReport): Resource<Boolean> {
         return try {
             videoReportDao.insertReport(report.toVideoReportEntity())
+            Log.i(TAG, "Success insert $report")
             Resource.Success(true)
         } catch (e: Exception) {
             Resource.Error(

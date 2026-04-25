@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MiniTVTest</string>
+
+    <string name="play_now">Сейчас играет:</string>
+    <string name="loading">Загрузка…</string>
+    <string name="video">Видео</string>
+    <string name="error">Ошибка:</string>
 </resources>

@@ -6,7 +6,6 @@ import com.google.gson.reflect.TypeToken
 import ru.asmelnikov.minitvtest.data.model.VideoItemDTO
 import ru.asmelnikov.minitvtest.domain.model.ErrorsTypes
 import ru.asmelnikov.minitvtest.domain.model.Resource
-import java.io.IOException
 
 interface JsonReader {
 
